@@ -2,8 +2,8 @@
  * @Author: zhanghui rem486@qq.com
  * @Date: 2022-07-01 17:56:00
  * @LastEditors: zhanghui rem486@qq.com
- * @LastEditTime: 2022-07-04 17:56:34
- * @FilePath: \bilibili-subscribe\index.ts
+ * @LastEditTime: 2022-07-04 18:19:21
+ * @FilePath: \bilibili-subscribe\src\index.ts
  * @Description: bilibili订阅
  */
 
@@ -18,7 +18,7 @@ class Init extends Http {
       throw new Error("miss cookie")
     }
     if (!uid) {
-      throw new Error("miss ssid")
+      throw new Error("miss uid")
     }
     this.data.cookie = cookie;
     this.data.ssid = uid;
