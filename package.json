@@ -1,0 +1,25 @@
+{
+  "name": "bilibili-subscribe",
+  "version": "1.0.2",
+  "description": "获取B站订阅",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ActingCute/bilibili-subscribe.git"
+  },
+  "keywords": [
+    "bilibili"
+  ],
+  "author": "ActingCute",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ActingCute/bilibili-subscribe/issues"
+  },
+  "homepage": "https://github.com/ActingCute/bilibili-subscribe#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
