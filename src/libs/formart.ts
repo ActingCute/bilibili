@@ -54,7 +54,8 @@ class FormartData {
         total = bangumi["total_count"]; //total_count是预计总集数
       } else if (
         !bangumi["is_started"] ||
-        (bangumi["new_ep"] && bangumi["new_ep"]["index_show"] &&
+        (bangumi["new_ep"] &&
+          bangumi["new_ep"]["index_show"] &&
           bangumi["new_ep"]["index_show"] == "即将开播")
       ) {
         total = 0;
@@ -106,7 +107,7 @@ class FormartData {
         if (bangumi["new_ep"] && bangumi["new_ep"]["index_show"]) {
           watched_progress_text = "还没看/" + bangumi["new_ep"]["index_show"];
         } else {
-          watched_progress_text = "还没看"
+          watched_progress_text = "还没看";
         }
       }
 
@@ -142,7 +143,7 @@ class FormartData {
       ret.push(temp);
     });
     return ret;
-  }
+  };
 }
 
-export default FormartData
+export default FormartData;

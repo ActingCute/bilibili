@@ -2,7 +2,7 @@
   @Author: zhanghui rem486@qq.com
   @Date: 2022-07-04 16:24:58
  * @LastEditors: zhanghui rem486@qq.com
- * @LastEditTime: 2022-07-04 16:31:23
+ * @LastEditTime: 2022-12-23 14:35:12
  * @FilePath: \bilibili-subscribe\readme.md
   @Description: readme
 -->
@@ -14,10 +14,28 @@
   npm install bilibili-subscribe
 
 ## Example
-    const subscribeClass = new subscribe(ssid, cookie) 
+
+    //七牛参数
+    const qiniu = {
+      accessKey: 'xxx',
+      secretKey: 'xxx',
+      bucket: 'lovely', //七牛空间
+      zone: 'Zone_z0',  //七牛地区
+      domain: "https://lovely.haibarai.com",
+      key: "bilibili" //前缀 加上后地址 https://lovely.haibarai.com/bilibili/074056b8543ed2ceb53dc13a79da1eafa3fa921a.jpg
+    }
+    const subscribeClass = new subscribe(uid, cookie) 
     //uid 是用户的uid，打开个人空间可在url看到的那一串数字;cookie为B站cookie;
 
-    let data = await subscribeClass.getData()
+    let page = 1; //页数
+    let data = await subscribeClass.getData(page)
+
+## 七牛地区表
+
+      华东 Zone_z0
+      华北 Zone_z1
+      华南 Zone_z2
+      北美 Zone_na0
 
 ## 按照老夫追了那么多番剧,看了那么多情况,可以将它归纳一下
      
