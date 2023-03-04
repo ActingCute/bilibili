@@ -4,7 +4,8 @@
   "description": "获取B站订阅",
   "main": "pkg/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
   },
   "homepage": "https://github.com/ActingCute/bilibili-subscribe#readme",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "qiniu": "^7.8.0",
+    "save": "^2.9.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.1"

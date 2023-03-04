@@ -2,7 +2,7 @@
  * @Author: zhanghui rem486@qq.com
  * @Date: 2022-07-04 14:35:43
  * @LastEditors: ActingCute酱 rem486@qq.com
- * @LastEditTime: 2023-03-04 17:32:09
+ * @LastEditTime: 2023-03-04 18:30:57
  * @FilePath: \bilibili-subscribe\src\libs\http.ts
  * @Description: 请求
  */
@@ -44,7 +44,7 @@ class Http extends Data {
         },
       };
     }
- 
+
     return {
       code: -1,
       msg: data?.data?.msg || data?.data?.data?.message || "请求失败",
