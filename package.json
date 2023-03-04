@@ -1,8 +1,8 @@
 {
   "name": "bilibili-subscribe",
-  "version": "1.0.4",
+  "version": "2.0.1",
   "description": "获取B站订阅",
-  "main": "pkg/index.js",
+  "main": "pkg/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

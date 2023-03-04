@@ -22,7 +22,7 @@ class Init extends Http {
     }
     this.data.cookie = cookie;
     this.data.ssid = uid;
-    this.data.pege = page;
+    this.data.page = page;
     this.data.limit = limit;
 
     console.log("subscribe init uid ", uid);

@@ -2,7 +2,7 @@ import FormartData from "./formart";
 interface Data_ {
     cookie: string;
     ssid: string;
-    pege: number;
+    page: number;
     limit: number;
     url: string;
     referer: string;

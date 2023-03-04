@@ -1,9 +1,9 @@
 /*
  * @Author: zhanghui rem486@qq.com
  * @Date: 2022-07-04 12:26:02
- * @LastEditors: zhanghui rem486@qq.com
- * @LastEditTime: 2022-07-04 16:23:05
- * @FilePath: \bilibili-subscribe\libs\formart.ts
+ * @LastEditors: ActingCute酱 rem486@qq.com
+ * @LastEditTime: 2023-03-04 17:51:39
+ * @FilePath: \bilibili-subscribe\src\libs\formart.ts
  * @Description: 格式化数据
  */
 class FormartData {
@@ -39,6 +39,7 @@ class FormartData {
       temp["link"] =
         "https://www.bilibili.com/bangumi/play/ss" + bangumi["season_id"] + "/"; //链接
       temp["nowraw"] = bangumi["progress"]; //进度复杂型
+
       //番剧状态
       if (bangumi["is_finish"]) {
         temp["status"] = 2;
@@ -54,7 +55,8 @@ class FormartData {
         total = bangumi["total_count"]; //total_count是预计总集数
       } else if (
         !bangumi["is_started"] ||
-        (bangumi["new_ep"] && bangumi["new_ep"]["index_show"] &&
+        (bangumi["new_ep"] &&
+          bangumi["new_ep"]["index_show"] &&
           bangumi["new_ep"]["index_show"] == "即将开播")
       ) {
         total = 0;
@@ -106,7 +108,7 @@ class FormartData {
         if (bangumi["new_ep"] && bangumi["new_ep"]["index_show"]) {
           watched_progress_text = "还没看/" + bangumi["new_ep"]["index_show"];
         } else {
-          watched_progress_text = "还没看"
+          watched_progress_text = "还没看";
         }
       }
 
@@ -127,6 +129,12 @@ class FormartData {
       //图片 - 原图 (非方形小头像)
       temp["img"] = bangumi["cover"];
 
+      //最新集数
+      temp["new_ep"] = bangumi["new_ep"];
+
+      //更新时间
+      temp["renewal_time"] = bangumi["renewal_time"];
+
       //硬币
       //temp["coin"] = bangumi["stat"]["coin"];
 
@@ -142,7 +150,7 @@ class FormartData {
       ret.push(temp);
     });
     return ret;
-  }
+  };
 }
 
-export default FormartData
+export default FormartData;
